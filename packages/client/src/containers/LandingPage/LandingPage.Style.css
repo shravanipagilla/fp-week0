@@ -1,0 +1,21 @@
+.landing-page-container {
+  color: #424919;
+  font-size: 5vh;
+  min-height: 100vh;
+  background: linear-gradient(180deg, #231c16 0%, rgb(35 28 22 / 75%) 100%);
+}
+
+.landing-page-header {
+  height: 30vh;
+  line-height: 30vh;
+}
+
+.product-list {
+  list-style: none;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: 1fr 1fr;
+  width: 70vw;
+  margin: 0 auto;
+  gap: 2em;
+}

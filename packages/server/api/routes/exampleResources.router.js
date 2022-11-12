@@ -36,7 +36,7 @@ router.get('/', (req, res, next) => {
  * /exampleResources/{ID}:
  *  get:
  *    tags:
- *    - ExampleResources
+ *    - exampleResources
  *    summary: Get exampleResource by ID
  *    description:
  *      Will return single exampleResource with a matching ID.

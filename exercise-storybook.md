@@ -109,7 +109,14 @@ RoundedImage.propTypes = {
    */
   alt: PropTypes.string,
 };
+
+RoundedImage.defaultProps = {
+  alt: '',
+};
 ```
+
+Notice that we had to declare a default value for the non-required prop! What
+happens if we don't do that? (Hint - cannot commit and push code!)
 
 ### Bonus
 

@@ -13,4 +13,7 @@ router.get('/', (req, res, next) => {
     .catch(next);
 });
 
+// add SWAGGER documentation
+// add POST product route
+
 module.exports = router;

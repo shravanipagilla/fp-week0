@@ -5,7 +5,7 @@
 In `packages/server`, create an `.env` file and, following the `.env.example`, fill out the credentials to connect to your local instance.
 Don't worry about the schema just yet, we will proceed to get familiar with Swagger first.
 <br/>
-In a standard case, you should only need to change this property:
+In a standard case, you should only need to change this property right now, so it at least is able to connect to the local instance:
 
 ```
 DB_PASSWORD="root"
@@ -26,8 +26,8 @@ Compare the rendered interactive parts with the annotations in exampleResources 
 
 ## Interact with the Swagger UI
 
-- Create a schema in the local instance called `final_project_db`.
-- In the terminal, navigate to `packages/server` and run `yarn db:setup `.
+- Create a schema in the local instance called `final_project_db` (or another name - just make sure to set in in the `.env` file for the `DB_DATABASE` property).
+- In the terminal, navigate to `packages/server` and run `yarn db:setup `. You will hear more about this in week1, but for now just know that this last command runs the migrations which build some tables in your database and seeds which put some mock data into those tables.
 
 You should now have a schema populated with mock data and be able to interact with Swagger UI to test the APIs.
 

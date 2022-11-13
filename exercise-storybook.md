@@ -18,7 +18,7 @@ component will simplify styles and usage across the app.
 ### A simple component
 
 Create a new folder under `packages/client/src/components/` and name it
-`RoundedImage`. Create a new file inside and name it `RoundedImage.components.js`.
+`RoundedImage`. Create a new file inside and name it `RoundedImage.component.js`.
 
 Start by adding import `import React from 'react';` at the beginning.
 
@@ -29,6 +29,41 @@ export const RoundedImage = ({ src, alt, ...props }) => {
   return <img src={src} alt={alt} width={80} height={80} title={alt} />;
 };
 ```
+
+### Prop types
+
+To help others consume the component you've made, we need to explain which props
+are there and how to use them.
+
+Add the following import to the `RoundedImage.components.js` file:
+
+```
+import PropTypes from 'prop-types';
+```
+
+Add the following code _after_ the component in that file:
+
+```js
+RoundedImage.propTypes = {
+  /**
+   * The URL for the image - this is required for component to work.
+   */
+  src: PropTypes.string.isRequired,
+
+  /**
+   * Text to show as alt and title.
+   * Optional.
+   */
+  alt: PropTypes.string,
+};
+
+RoundedImage.defaultProps = {
+  alt: '',
+};
+```
+
+Notice that we had to declare a default value for the non-required prop! What
+happens if we don't do that? (Hint - cannot commit and push code!)
 
 ### Storybook
 
@@ -82,41 +117,6 @@ import './RoundedImage.styles.css';
 ```
 
 Add `className="rounded-image"` to the `<img` part of our component.
-
-### Prop types
-
-To help others consume the component you've made, we need to explain which props
-are there and how to use them.
-
-Add the following import to the `RoundedImage.components.js` file:
-
-```
-import PropTypes from 'prop-types';
-```
-
-Add the following code _after_ the component in that file:
-
-```js
-RoundedImage.propTypes = {
-  /**
-   * The URL for the image - this is required for component to work.
-   */
-  src: PropTypes.string.isRequired,
-
-  /**
-   * Text to show as alt and title.
-   * Optional.
-   */
-  alt: PropTypes.string,
-};
-
-RoundedImage.defaultProps = {
-  alt: '',
-};
-```
-
-Notice that we had to declare a default value for the non-required prop! What
-happens if we don't do that? (Hint - cannot commit and push code!)
 
 ### Bonus
 

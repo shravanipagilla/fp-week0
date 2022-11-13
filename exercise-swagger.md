@@ -11,6 +11,9 @@ In a standard case, you should only need to change this property right now, so i
 DB_PASSWORD="root"
 ```
 
+In the final project (and here in week0), once the server is running, your Swagger documentation is set up to be rendered at http://localhost:5000/api/documentation/.
+A generic Swagger documentation UI example can be found here: [click](https://petstore.swagger.io/v2/swagger.json).
+
 <br/>
 
 ## Explore the example routes and Swagger UI
@@ -40,6 +43,8 @@ You should now have a schema populated with mock data and be able to interact wi
 - Navigate to `packages/server/api/routes/products.router.js`.
 - Document the existing `'/'` products route in Swagger, and rerun the server.
 - Test out the newly documented route in Swagger UI - fetch the products from the database.
+
+Look at the `exampleResources` for inspiration and check out the [official Swagger documentation](https://swagger.io/docs/specification/basic-structure/) to learn more.
 
 <br/>
 

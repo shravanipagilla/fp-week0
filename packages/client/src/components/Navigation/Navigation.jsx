@@ -59,6 +59,7 @@ Navigation.propTypes = {
   Cart: PropTypes.string,
   type: PropTypes.string,
 };
+
 Navigation.defaultProps = {
   SignIn: '',
   Favourites: '',
